@@ -189,11 +189,11 @@ export default function Home() {
         <div className="flex items-center justify-between">
           <div>
             <div className="flex items-center gap-2">
-              <h1 className="font-bold text-2xl gradient-text">Swift Market</h1>
+              <h1 className="font-bold text-xl gradient-text">Swift Market</h1>
               <div className="flex items-center gap-1 px-2 py-1 bg-green-100 rounded-full">
                 <Clock className="w-3 h-3 text-green-600" />
                 <span className="text-xs font-medium text-green-600">
-                  12 mins
+                  12 mins 
                 </span>
               </div>
             </div>
@@ -204,7 +204,8 @@ export default function Home() {
             </div>
           </div>
           <button className="p-2.5 bg-white/80 hover:bg-white shadow-sm rounded-full transition-colors">
-            <User className="w-6 h-6 text-[var(--brand-purple)]" />
+          <span className="text-3xl">🫂</span>
+            {/* <User className="w-6 h-6 text-[var(--brand-purple)]" /> */}
           </button>
         </div>
         <div className="relative">
