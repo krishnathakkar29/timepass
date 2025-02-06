@@ -3,19 +3,96 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Premium color palette */
+  --brand-primary: #2c3e50;
+  --brand-purple: #5e60ce;
+  --brand-blue: #4361ee;
+  --brand-light-blue: #64dfdf;
+  --brand-bg: #f8fafc;
+  --brand-accent: #6930c3;
+
+  /* Semantic colors */
+  --text-primary: #2c3e50;
+  --text-secondary: #64748b;
+  --surface-light: #ffffff;
+  --surface-dark: #1e293b;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  body {
+    @apply bg-[var(--brand-bg)];
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  .card-shadow {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[var(--brand-purple)] to-[var(--brand-blue)];
+  }
+
+  .premium-button {
+    @apply bg-gradient-to-r from-[var(--brand-purple)] to-[var(--brand-blue)] 
+           text-white font-medium px-6 py-2.5 rounded-xl
+           hover:shadow-lg hover:scale-[1.02] transition-all duration-300;
+  }
+
+  .category-card {
+    @apply relative overflow-hidden rounded-2xl bg-white
+           hover:shadow-xl transition-all duration-300
+           hover:scale-[1.02] cursor-pointer;
+  }
+
+  .product-card {
+    @apply bg-white rounded-2xl p-4 card-shadow
+           hover:shadow-xl hover:scale-[1.02] transition-all duration-300
+           border border-gray-100;
+  }
+
+  .search-input {
+    @apply w-full px-4 py-3.5 bg-white rounded-xl pl-11 pr-4 
+           outline-none border border-gray-100
+           focus:ring-2 focus:ring-[var(--brand-purple)] focus:border-transparent
+           transition-all shadow-sm;
+  }
+}
+
+/* Enhanced animations */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.float-animation {
+  animation: float 4s ease-in-out infinite;
+}
+
+.scrollbar-hide {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Premium gradients */
+.premium-gradient {
+  background: linear-gradient(
+    135deg,
+    var(--brand-purple) 0%,
+    var(--brand-blue) 100%
+  );
+}
+
+.glass-effect {
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.8);
 }
