@@ -189,7 +189,7 @@ export default function Home() {
         <div className="flex items-center justify-between">
           <div>
             <div className="flex items-center gap-2">
-              <h1 className="font-bold text-xl gradient-text">Swift Market</h1>
+              <h1 className="font-bold text-xl gradient-text">Mithibai College</h1>
               <div className="flex items-center gap-1 px-2 py-1 bg-green-100 rounded-full">
                 <Clock className="w-3 h-3 text-green-600" />
                 <span className="text-xs font-medium text-green-600">
@@ -199,7 +199,7 @@ export default function Home() {
             </div>
             <div className="flex items-center gap-1 text-sm text-gray-600 mt-1">
               <MapPin className="w-4 h-4" />
-              <p>No. 2/50-G, Shantipath, Ra...</p>
+              <p>No. 2/50-G, Vile Parle, Mum...</p>
               <ChevronRight className="w-4 h-4" />
             </div>
           </div>
